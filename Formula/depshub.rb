@@ -1,22 +1,27 @@
 class Depshub < Formula
   desc "DepsHub is a tool to manage your dependencies"
   homepage "https://github.com/DepsHubHQ/depshub"
-  version "0.8.4"
+  version "0.8.5"
   license "AGPL-3.0"
   
   on_macos do
     on_arm do
-      url "https://github.com/DepsHubHQ/depshub/releases/download/v0.8.4/depshub-darwin-arm64"
-      sha256 "0fa3113470b81fc37872ad48a8a621971fcac71cf7c63fe2a57a49b4c60598d6"
+      url "https://github.com/DepsHubHQ/depshub/releases/download/v0.8.5/depshub-darwin-arm64"
+      sha256 "59d612ae5b58113b45e50b924309df1ae5458b41299e063968244229ddb0d48d"
     end
     on_intel do
-      url "https://github.com/DepsHubHQ/depshub/releases/download/v0.8.4/depshub-darwin-amd64"
-      sha256 "7da44e4945a3a426cfcd45042eabd7a1f5d1178c183b82641d8c247b8f0bd01b"
+      url "https://github.com/DepsHubHQ/depshub/releases/download/v0.8.5/depshub-darwin-amd64"
+      sha256 "b426549f1e1d9ca68b7d4593582a1f02b6da5353fe8a76e752533dd77f04253b"
     end
   end
   
   def install
-    mv "depshub-darwin-#{Hardware::CPU.arch}", "depshub"
+    if Hardware::CPU.intel?
+      mv "depshub-darwin-amd64", "depshub"
+    elsif Hardware::CPU.arm?
+      mv "depshub-darwin-arm64", "depshub"
+    end
     bin.install "depshub"
   end
+
 end
