@@ -1,4 +1,5 @@
 class Depshub < Formula
+  name "depshub"
   desc "DepsHub is a tool to manage your dependencies"
   homepage "https://github.com/DepsHubHQ/depshub"
   version "0.8.3"
