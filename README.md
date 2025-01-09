@@ -1,4 +1,4 @@
 ```
-brew tap DepsHubHQ/tap
+brew tap DepsHubHQ/depshub
 brew install depshub
 ```
