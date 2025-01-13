@@ -1,17 +1,17 @@
 class Depshub < Formula
   desc "DepsHub is a tool to manage your dependencies"
   homepage "https://github.com/DepsHubHQ/depshub"
-  version "0.8.5"
+  version "0.8.6"
   license "AGPL-3.0"
   
   on_macos do
     on_arm do
-      url "https://github.com/DepsHubHQ/depshub/releases/download/v0.8.5/depshub-darwin-arm64"
-      sha256 "59d612ae5b58113b45e50b924309df1ae5458b41299e063968244229ddb0d48d"
+      url "https://github.com/DepsHubHQ/depshub/releases/download/v0.8.6/depshub-darwin-arm64"
+      sha256 "b2315c53a68327d2b2f9b94ae1ff01aab71bd75769354d6a89b9112fa4c26e97"
     end
     on_intel do
-      url "https://github.com/DepsHubHQ/depshub/releases/download/v0.8.5/depshub-darwin-amd64"
-      sha256 "b426549f1e1d9ca68b7d4593582a1f02b6da5353fe8a76e752533dd77f04253b"
+      url "https://github.com/DepsHubHQ/depshub/releases/download/v0.8.6/depshub-darwin-amd64"
+      sha256 "a3e77f744a7782a7dc9f7163fd0880a487e8bf02654e0cac3257c068aa7f7eef"
     end
   end
   
